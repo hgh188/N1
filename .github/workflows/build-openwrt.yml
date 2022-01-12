@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt mini
+name: Build OpenWrt
 
 on:
   repository_dispatch:
@@ -162,8 +162,8 @@ jobs:
         commit: main
         token: ${{ secrets.RELEASES_TOKEN }}
         body: |
-          - 此为高大全底包，非完整固件，每日自动编译
-          - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
+          - 此为自用
+          - 
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
 
