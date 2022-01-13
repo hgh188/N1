@@ -161,11 +161,7 @@ jobs:
         tag: ${{ env.FILE_NAME }}
         commit: main
         token: ${{ secrets.RELEASES_TOKEN }}
-        body: |
-          - 此为自用
-          - 
-          ${{ env.useVersionInfo }}
-        artifacts: ${{ env.FIRMWARE }}/*
+       
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
